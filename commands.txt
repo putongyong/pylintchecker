@@ -1,0 +1,19 @@
+export PYTHONPATH=/Users/yongxie/Desktop/pychecker 
+echo $PYTHONPATH
+
+PYTHONPATH=. pylint --load-plugins=my_plugin test.py
+PYTHONPATH=. pylint --load-plugins=my_plugin --disable=all --enable=non-unique-returns test.py
+
+PYTHONPATH=. pylint --load-plugins=my_plugin1 test1.py
+PYTHONPATH=. pylint --load-plugins=my_plugin1 --disable=all --enable=non-unique-returns test1.py
+
+PYTHONPATH=. pylint --load-plugins=my_plugin2 test2.py
+PYTHONPATH=. pylint --load-plugins=my_plugin2 --disable=all --enable=non-unique-returns test2.py
+
+PYTHONPATH=. pylint --load-plugins=my_plugin3 test3.py
+PYTHONPATH=. pylint --load-plugins=my_plugin3 --disable=all --enable=non-unique-returns test3.py
+
+PYTHONPATH=. pylint --load-plugins=my_plugin4 test4.py
+PYTHONPATH=. pylint --load-plugins=my_plugin4 --disable=all --enable=non-unique-returns test4.py
+
+python3 testingfile2.py
