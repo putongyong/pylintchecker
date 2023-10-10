@@ -16,4 +16,7 @@ PYTHONPATH=. pylint --load-plugins=my_plugin3 --disable=all --enable=non-unique-
 PYTHONPATH=. pylint --load-plugins=my_plugin4 test4.py
 PYTHONPATH=. pylint --load-plugins=my_plugin4 --disable=all --enable=non-unique-returns test4.py
 
+PYTHONPATH=. pylint --load-plugins=my_plugin5 test5.py
+PYTHONPATH=. pylint --load-plugins=my_plugin5 --disable=all --enable=non-unique-returns test5.py
+
 python3 testingfile2.py
