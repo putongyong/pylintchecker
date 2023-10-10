@@ -31,24 +31,9 @@ class NamesToAvoidChecker(BaseChecker):
                 name = target.attrname
             if name and len(name) == 1 and name in ('l', 'O', 'I'):
                 self.add_message("names-to-avoid", node=node)
-    
+    '''
     def visit_classdef(self, node: nodes.Module) -> None:
-        '''
-        try:
-            bd = node.body
-            if isinstance(bd,nodes.Assign):
-                targets = bd.targets
-                for target in targets:
-                    name = target.name
-                    if name and len(name) == 1 and name in ('l', 'O', 'I'):
-                        self.add_message("names-to-avoid", node=node)
-        except:
-            bd = node.body[0].body[0].body
-            if isinstance(bd,nodes.Assign):
-                name = bd[0].targets[0].attrname
-                if name and len(name) == 1 and name in ('l', 'O', 'I'):
-                    self.add_message("names-to-avoid", node=node)
-        '''
+
         if node.body:
             bd = node.body
             if isinstance(bd,nodes.Assign):
@@ -57,6 +42,7 @@ class NamesToAvoidChecker(BaseChecker):
                     name = target.name
                     if name and len(name) == 1 and name in ('l', 'O', 'I'):
                         self.add_message("names-to-avoid", node=node)
+        '''                
 
     def visit_functiondef(self, node: nodes.FunctionDef) -> None:
         
